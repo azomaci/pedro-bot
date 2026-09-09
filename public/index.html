@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Кликер Игра 🪙</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/icon.svg">
+    
+    <!-- Meta tags for sharing -->
+    <meta name="description" content="Кликай на монету и зарабатывай! Увлекательная игра-кликер с улучшениями">
+    <meta property="og:title" content="Кликер Игра 🪙">
+    <meta property="og:description" content="Кликай на монету и зарабатывай! Увлекательная игра-кликер с улучшениями">
+    <meta property="og:image" content="images/logo.svg">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header с балансом -->
+        <div class="header">
+            <div class="balance-container">
+                <div class="coin-icon">🪙</div>
+                <div class="balance" id="balance">0</div>
+            </div>
+            <div class="energy-container">
+                <div class="energy-icon">⚡</div>
+                <div class="energy-text">
+                    <span id="energy">1000</span>/<span id="maxEnergy">1000</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Главная кликабельная область -->
+        <div class="main-area">
+            <div class="click-zone" id="clickZone">
+                <div class="coin-big">
+                    <div class="coin-inner">🪙</div>
+                    <div class="coin-glow"></div>
+                </div>
+            </div>
+            <div class="click-counter" id="clickCounter">+1</div>
+        </div>
+
+        <!-- Статистика -->
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-label">Доход за клик</div>
+                <div class="stat-value" id="coinsPerClick">1 🪙</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Всего кликов</div>
+                <div class="stat-value" id="totalClicks">0</div>
+            </div>
+        </div>
+
+        <!-- Навигация -->
+        <div class="navigation">
+            <button class="nav-btn active" data-page="game">
+                <span class="nav-icon">🎮</span>
+                <span class="nav-label">Игра</span>
+            </button>
+            <button class="nav-btn" data-page="upgrades">
+                <span class="nav-icon">⬆️</span>
+                <span class="nav-label">Улучшения</span>
+            </button>
+            <button class="nav-btn" data-page="leaderboard">
+                <span class="nav-icon">🏆</span>
+                <span class="nav-label">Топ</span>
+            </button>
+        </div>
+
+        <!-- Страница улучшений -->
+        <div class="page page-upgrades" id="upgradesPage">
+            <div class="page-header">
+                <h2>⬆️ Улучшения</h2>
+            </div>
+            <div class="upgrades-list">
+                <div class="upgrade-card" id="upgradeIncome">
+                    <div class="upgrade-icon">💰</div>
+                    <div class="upgrade-info">
+                        <div class="upgrade-title">Увеличить доход</div>
+                        <div class="upgrade-desc">+1 монета за клик</div>
+                        <div class="upgrade-cost">Стоимость: <span id="incomeCost">100</span> 🪙</div>
+                    </div>
+                    <button class="upgrade-btn">Купить</button>
+                </div>
+                <div class="upgrade-card" id="upgradeEnergy">
+                    <div class="upgrade-icon">⚡</div>
+                    <div class="upgrade-info">
+                        <div class="upgrade-title">Увеличить энергию</div>
+                        <div class="upgrade-desc">+100 макс. энергии</div>
+                        <div class="upgrade-cost">Стоимость: <span id="energyCost">100</span> 🪙</div>
+                    </div>
+                    <button class="upgrade-btn">Купить</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Страница лидеров -->
+        <div class="page page-leaderboard" id="leaderboardPage">
+            <div class="page-header">
+                <h2>🏆 Таблица лидеров</h2>
+            </div>
+            <div class="leaderboard-list" id="leaderboardList">
+                <div class="loading">Загрузка...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating coins animation -->
+    <div id="floatingCoins"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

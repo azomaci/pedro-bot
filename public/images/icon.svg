@@ -1,0 +1,29 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Золотая монета с градиентом -->
+  <circle cx="256" cy="256" r="240" fill="url(#goldGradient)"/>
+  <circle cx="256" cy="256" r="240" fill="url(#shine)" opacity="0.3"/>
+  
+  <!-- Внутренний круг -->
+  <circle cx="256" cy="256" r="200" fill="none" stroke="#FFA500" stroke-width="8"/>
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#FFD700" stroke-width="4"/>
+  
+  <!-- Символ монеты -->
+  <text x="256" y="320" font-family="Arial, sans-serif" font-size="180" font-weight="bold" fill="#FFA500" text-anchor="middle">$</text>
+  
+  <!-- Блики -->
+  <ellipse cx="180" cy="150" rx="60" ry="40" fill="white" opacity="0.4"/>
+  <ellipse cx="350" cy="320" rx="40" ry="30" fill="white" opacity="0.2"/>
+  
+  <!-- Градиенты -->
+  <defs>
+    <radialGradient id="goldGradient" cx="40%" cy="40%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="shine" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+</svg>

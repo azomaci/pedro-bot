@@ -1,0 +1,119 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Фиолетовый фон -->
+  <rect width="640" height="360" fill="#7B6DB8"/>
+  
+  <!-- Тень под монетой -->
+  <ellipse cx="320" cy="195" rx="135" ry="20" fill="#000000" opacity="0.15"/>
+  
+  <!-- Внешний контур монеты (темный край) -->
+  <circle cx="320" cy="180" r="148" fill="#CC7A00"/>
+  
+  <!-- Основная монета с градиентом -->
+  <circle cx="320" cy="180" r="145" fill="url(#coinGradient)"/>
+  
+  <!-- Внутренний градиент для объема -->
+  <circle cx="320" cy="180" r="145" fill="url(#coinDepth)"/>
+  
+  <!-- Светлая окантовка -->
+  <circle cx="320" cy="180" r="140" fill="none" stroke="url(#edgeLight)" stroke-width="3"/>
+  
+  <!-- Темная внутренняя окантовка -->
+  <circle cx="320" cy="180" r="130" fill="none" stroke="#E89800" stroke-width="1.5" opacity="0.4"/>
+  
+  <!-- Средний круг с градиентом (персиковый) -->
+  <circle cx="320" cy="180" r="68" fill="url(#middleCircle)"/>
+  <circle cx="320" cy="180" r="68" fill="none" stroke="#D4A574" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Внутренний светлый круг -->
+  <circle cx="320" cy="180" r="52" fill="url(#innerCircle)"/>
+  
+  <!-- Иконка банка (греческий храм) -->
+  <g transform="translate(320, 180)">
+    <!-- Крыша (треугольник) -->
+    <path d="M -26 -18 L 0 -30 L 26 -18 Z" fill="url(#roofGradient)"/>
+    <path d="M -26 -18 L 26 -18 L 26 -14 L -26 -14 Z" fill="#C27A3F"/>
+    
+    <!-- Колонны с объемом -->
+    <rect x="-21" y="-12" width="9" height="28" fill="url(#columnGradient1)"/>
+    <rect x="-6" y="-12" width="9" height="28" fill="url(#columnGradient2)"/>
+    <rect x="9" y="-12" width="9" height="28" fill="url(#columnGradient3)"/>
+    
+    <!-- Основание -->
+    <rect x="-26" y="16" width="52" height="6" fill="url(#baseGradient)"/>
+    
+    <!-- Детали колонн (капители) -->
+    <rect x="-21" y="-13" width="9" height="2" fill="#E89850"/>
+    <rect x="-6" y="-13" width="9" height="2" fill="#E89850"/>
+    <rect x="9" y="-13" width="9" height="2" fill="#E89850"/>
+  </g>
+  
+  <!-- Градиенты -->
+  <defs>
+    <!-- Основной градиент монеты -->
+    <radialGradient id="coinGradient" cx="35%" cy="35%">
+      <stop offset="0%" style="stop-color:#FFD966;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#FFBF3F;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#FFA726;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF9800;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Объем монеты (тень по краям) -->
+    <radialGradient id="coinDepth" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#FFD966;stop-opacity:0" />
+      <stop offset="70%" style="stop-color:#000000;stop-opacity:0" />
+      <stop offset="95%" style="stop-color:#000000;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.4" />
+    </radialGradient>
+    
+    <!-- Светлая окантовка -->
+    <linearGradient id="edgeLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFE699;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFD054;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFAD33;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Средний круг -->
+    <radialGradient id="middleCircle" cx="40%" cy="40%">
+      <stop offset="0%" style="stop-color:#F5D5B8;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#E8B896;stop-opacity:0.8" />
+    </radialGradient>
+    
+    <!-- Внутренний круг -->
+    <radialGradient id="innerCircle" cx="35%" cy="35%">
+      <stop offset="0%" style="stop-color:#FCE8D4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0D5BC;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Крыша банка -->
+    <linearGradient id="roofGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#B86F3F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D4925F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B86F3F;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Колонны -->
+    <linearGradient id="columnGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#B86F3F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D4925F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C27A3F;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="columnGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#C27A3F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D4925F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B86F3F;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="columnGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#B86F3F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D4925F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C27A3F;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Основание -->
+    <linearGradient id="baseGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4925F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B86F3F;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
