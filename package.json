@@ -9,7 +9,7 @@
     "dev": "concurrently \"nodemon bot.js\" \"nodemon server.js\"",
     "bot": "node bot.js",
     "web": "node server.js",
-    "production": "node server.js"
+    "production": "node start.js"
   },
   "dependencies": {
     "node-telegram-bot-api": "^0.66.0",

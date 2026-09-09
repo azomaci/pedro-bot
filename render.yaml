@@ -3,7 +3,7 @@ services:
     name: telegram-clicker-bot
     env: node
     buildCommand: npm install
-    startCommand: node server.js & node bot.js
+    startCommand: npm run production
     envVars:
       - key: NODE_ENV
         value: production
